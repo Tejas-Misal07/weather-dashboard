@@ -1,0 +1,224 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* =========================
+   CSS RESET
+========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+p,
+form {
+  margin: 0;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+  --color-primary-dark: #2c3e50;
+  --color-primary-light: #3498db;
+  --color-bg-main: #ecf0f1;
+  --color-bg-card: #ffffff;
+  --color-text-dark: #34495e;
+  --color-text-light: #ffffff;
+  --color-border: #bdc3c7;
+
+  --font-family-main: 'Poppins', sans-serif;
+
+  --spacing-unit: 1rem;
+
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+}
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+body {
+  font-family: var(--font-family-main);
+  background-color: var(--color-bg-main);
+  color: var(--color-text-dark);
+  line-height: 1.5;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-light);
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+main {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+
+  padding: 2rem;
+
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+/* =========================
+   SEARCH SECTION
+========================= */
+
+.search-section {
+  background-color: var(--color-bg-card);
+  padding: 1.5rem;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-border);
+  height: fit-content;
+}
+
+.search-section input {
+  width: 100%;
+  padding: 1rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+
+  transition: 0.2s;
+}
+
+.search-section input:focus {
+  outline: none;
+  border-color: var(--color-primary-light);
+
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.25);
+}
+
+.search-section button {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+
+  background-color: var(--color-primary-light);
+  color: white;
+
+  border: none;
+  border-radius: var(--border-radius-sm);
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.search-section button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* =========================
+   WEATHER CONTENT
+========================= */
+
+.weather-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* =========================
+   CURRENT WEATHER CARD
+========================= */
+
+.current-weather-section {
+  background-color: var(--color-bg-card);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+
+  padding: 2rem;
+}
+
+.current-weather-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.current-weather-section p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* =========================
+   FORECAST SECTION
+========================= */
+
+.forecast-section h2 {
+  margin-bottom: 1rem;
+}
+
+.forecast-cards-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.forecast-card {
+  flex: 1;
+
+  min-width: 150px;
+
+  background-color: var(--color-bg-card);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+
+  padding: 1rem;
+
+  text-align: center;
+}
+
+.forecast-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.forecast-card p {
+  margin-bottom: 0.3rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .forecast-cards-container {
+    flex-direction: column;
+  }
+}

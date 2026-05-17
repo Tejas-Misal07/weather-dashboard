@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Weather Dashboard</title>
+
+  <!-- CSS File -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Live Weather Dashboard</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Search Section -->
+    <section class="search-section">
+      <form id="weather-form">
+        <input
+          type="text"
+          id="city-input"
+          placeholder="Enter a city name"
+          required
+        />
+
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
+    <!-- Right Side Content -->
+    <div class="weather-content">
+
+      <!-- Current Weather -->
+      <section id="current-weather" class="current-weather-section">
+        <h2 id="city-name-date">City Name</h2>
+
+        <div class="weather-data">
+          <p id="temperature">Temperature: --</p>
+          <p id="humidity">Humidity: --</p>
+          <p id="wind-speed">Wind Speed: --</p>
+          <p id="weather-condition">Condition: --</p>
+        </div>
+      </section>
+
+      <!-- Forecast Section -->
+      <section class="forecast-section">
+        <h2>5-Day Forecast</h2>
+
+        <div id="forecast-container" class="forecast-cards-container">
+          <!-- Forecast cards will come here -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
