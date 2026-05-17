@@ -2,7 +2,7 @@
 // API KEY
 // =========================
 
-const API_KEY = "5e56f67cde898590bba0793df8528709";
+const API_KEY = "your_api_key";
 
 // =========================
 // SELECT ELEMENTS
@@ -28,7 +28,7 @@ async function fetchWeather(city) {
 
     // CURRENT WEATHER API
     const currentWeatherURL =
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${"5e56f67cde898590bba0793df8528709"}`;
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${"Your_api_key_Enter_here"}`;
 
     const response = await fetch(currentWeatherURL);
 
